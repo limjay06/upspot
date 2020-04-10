@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://jaylim:dmwjVTwXOV6RhoCD@cluster0-vihxf.mongodb.net/upspot?retryWrites=true&w=majority",
+  "jwtSecret": "secret"
+}
