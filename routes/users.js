@@ -19,7 +19,7 @@ router.post('/signup', [
     return res.status(422).json({errors: errors.array()})
   }
 
-  const {name, email, password, places} = req.body
+  const {name, email, password} = req.body
 
   try {
     let user = await User.findOne({email})
@@ -33,9 +33,7 @@ router.post('/signup', [
     user = new User({
       name,
       email,
-      password,
-      avatar: 'https://www.pngkey.com/png/detail/73-730477_first-name-profile-image-placeholder-png.png',
-      places      
+      password               
     })
 
     const salt = await bcrypt.genSalt(10)
