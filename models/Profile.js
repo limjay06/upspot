@@ -10,14 +10,14 @@ const ProfileSchema = new mongoose.Schema({
   location: {
     type: String
   },
-  status: {
+  visitStatus: {
     type: String,
     required: true
   },
   bio: {
     type: String
   },
-  place: [
+  favoritePlaces: [
     {
       title: {
         type: String,
@@ -43,7 +43,7 @@ const ProfileSchema = new mongoose.Schema({
       },
     }
   ],
-  social: {
+  socialMedia: {
     youtube: {
       type: String
     },
@@ -60,7 +60,7 @@ const ProfileSchema = new mongoose.Schema({
       type: String
     }
   },
-  date: {
+  createdOn: {
     type: Date,
     default: Date.now
   },
